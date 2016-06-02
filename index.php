@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap eCommerce Template</title>
+<title>AMPN Trading Pty Ltd</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="New folder/css/bootstrap.css">
@@ -30,14 +30,14 @@ include('header.html');
             <li data-target="#carousel1" data-slide-to="2" class=""> </li>
           </ol>
           <div class="carousel-inner">
-            <div class="item"> <img class="img-responsive" src="New folder/img/Landscape-Header-2.jpg" alt="thumb">
-              <div class="carousel-caption"> Carousel caption 1. Here goes slide description. Lorem ipsum dolor set amet. </div>
+            <div class="item"> <img class="img-responsive" src="New folder/img/1.jpg" alt="thumb">
+             
             </div>
-            <div class="item active"> <img class="img-responsive" src="New folder/img/About-1920x500-1444110618.jpg" alt="thumb">
-              <div class="carousel-caption">Our Portfolio</div>
+            <div class="item"> <img class="img-responsive" src="New folder/img/2.jpg" alt="thumb">
+             
             </div>
-            <div class="item"> <img class="img-responsive" src="New folder/img/Maintenance-1920x500.jpg" alt="thumb">
-              <div class="carousel-caption"> Carousel caption 3. Here goes slide description. Lorem ipsum dolor set amet. </div>
+            <div class="item active"> <img class="img-responsive" src="New folder/img/3.jpg" alt="thumb">
+             
             </div>
           </div>
           <a class="left carousel-control" href="#carousel1" data-slide="prev"><span class="icon-prev"></span></a> <a class="right carousel-control" href="#carousel1" data-slide="next"><span class="icon-next"></span></a></div>

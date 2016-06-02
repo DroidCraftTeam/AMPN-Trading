@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tapes & Adhesive Products</title>
+<title>Strapping & Tying Products</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="New folder/css/bootstrap.css">
@@ -26,34 +26,34 @@ include('header.html');
 <div class="container">
 </div>
 <hr>
-<h2 class="text-center">Tape & Adhesive Products</h2>
+<h2 class="text-center">Strapping & Tying Products</h2>
 <hr>
 <div class="container">
   <div class="row text-center">
     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
-      <div class="thumbnail"> <img src="New folder/img/tapes/filament_tape.jpg" alt="Thumbnail Image 1" class="img-responsive">
+      <div class="thumbnail"> <img src="New folder/img/strapping/polyester_strap.jpg" alt="Thumbnail Image 1" class="img-responsive">
         <div class="caption">
-          <h3>Filament Tape</h3>
+          <h3>Polyester Strap</h3>
          
-          <p><a href="filament_tape.php" class="btn btn-primary" role="button">View</a></p>
+          <p><a href="polyester_strap.php" class="btn btn-primary" role="button">View</a></p>
         </div>
       </div>
     </div>
     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
-      <div class="thumbnail"> <img src="New folder/img/tapes/masking_tape.jpg" alt="Thumbnail Image 1" class="img-responsive">
+      <div class="thumbnail"> <img src="New folder/img/strapping/plastic_buckles.jpg" alt="Thumbnail Image 1" class="img-responsive">
         <div class="caption">
-          <h3>Masking Tape</h3>
+          <h3>Plastic Buckles</h3>
         
-          <p><a href="masking_tape.php" class="btn btn-primary" role="button">View</a> </p>
+          <p><a href="plastic_buckles.php" class="btn btn-primary" role="button">View</a> </p>
         </div>
       </div>
     </div>
     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
-      <div class="thumbnail"> <img src="New folder/img/tapes/printed_fragile.jpg" alt="Thumbnail Image 1" class="img-responsive">
+      <div class="thumbnail"> <img src="New folder/img/strapping/wire_buckles.jpg" alt="Thumbnail Image 1" class="img-responsive">
         <div class="caption">
-          <h3>Printed Tape - Fragile</h3>
+          <h3>Wire Buckles</h3>
        
-          <p><a href="printed_fragile.php" class="btn btn-primary" role="button">View</a> </p>
+          <p><a href="wire_buckles.php" class="btn btn-primary" role="button">View</a> </p>
         </div>
       </div>
     </div>
@@ -68,20 +68,20 @@ include('header.html');
   </div>
   <div class="row text-center">
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-      <div class="thumbnail"> <img src="New folder/img/tapes/duct_tape.jpg" alt="Thumbnail Image 1" class="img-responsive">
+      <div class="thumbnail"> <img src="New folder/img/strapping/seals.jpg" alt="Thumbnail Image 1" class="img-responsive">
         <div class="caption">
-          <h3>Duct Tape</h3>
+          <h3>Seals</h3>
         
-          <p><a href="duct_tape.php" class="btn btn-primary" role="button">View</a> </p>
+          <p><a href="seals.php" class="btn btn-primary" role="button">View</a> </p>
         </div>
       </div>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-      <div class="thumbnail"> <img src="New folder/img/tapes/printed_topload.jpg" alt="Thumbnail Image 1" class="img-responsive">
+      <div class="thumbnail"> <img src="New folder/img/strapping/steel_strap.jpg" alt="Thumbnail Image 1" class="img-responsive">
         <div class="caption">
-          <h3>Printed Tape - Top Load Only</h3>
+          <h3>steel_strap</h3>
          
-          <p><a href="printed_topload.php" class="btn btn-primary" role="button">View</a> </p>
+          <p><a href="steel_strap.php" class="btn btn-primary" role="button">View</a> </p>
         </div>
       </div>
     </div>

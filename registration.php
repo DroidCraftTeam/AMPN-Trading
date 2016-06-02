@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Members</title>
+<title>Registration</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="New folder/css/bootstrap.css">
@@ -23,29 +23,22 @@ include('header.html');
 
 
 <hr>
-<h2 class="text-center">Members Login</h2>
+<h2 class="text-center">Registration</h2>
 <hr>
-<?PHP
+<div class="container">
 
-session_start();
-
-if ((isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-
-header ("Location: membersarea.php");
-
-}
-
-?>
-
-
-
-
-
- <div class="container">
-  <form action="login.php" method="post" name="form1"> <nav class="text-center">
-  
- 
+  <div class="row text-center"></div>
+  <form action="register.php" method="post" name="registration"> <nav class="text-center">
+    <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
+  <p>
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname">
+    </p>
+ <p>
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname">
+    </p>
+ <p>
       <label for="email">E-Mail:</label>
       <input type="text" name="email" id="email">
     </p>
@@ -54,13 +47,13 @@ header ("Location: membersarea.php");
       <input type="password" name="password" id="password" maxLength=10>
     </p>
     <p>
-      <button type="submit" name="button" id="button" value="Login"  class="btn btn-primary">Login</button>
-  </p>
-    <p><a href="registration.php">New Member? Click here to register.</a></p>
+      <button type="submit" name="button" id="button" value="Submit" class="btn btn-primary">Submit</button>
+	<button type="reset" name="reset" value="Reset" class="btn btn-primary">Reset</button>
+    </p>
+   
 </form>
   </nav>
 </div>
-
 <?php
 include('footer.html');
 ?>

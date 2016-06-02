@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About</title>
+<title>Hand Stretch Wrap</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="New folder/css/bootstrap.css">
@@ -17,35 +17,57 @@
     <![endif]-->
 </head>
 <body>
+
+
 <?php
 include('header.html');
 ?>
 
-<hr>
-<h2 class="text-center">About Us</h2>
-<hr>
-<div class="container">
 
-  <div class="row text-center"></div>
+
+<?php
+$conn = mysql_connect("localhost","root","");
+mysql_select_db("website", $conn);
+$seetable = "Select product_code, name,description,image from products where name = 'Hand Stretch Wrap'";
+
+$result1 = mysql_query($seetable, $conn);
+while ($row = mysql_fetch_assoc($result1))   {
+   
+               
+
+?>
+
+
+<h2 class="text-center"><?php echo$row['name'] ?></h2>
+<hr>  
+
+<div class="container">
+  <div class="row text-center">
+   
+  </div>
+  <div class="row text-center hidden-xs"></div>
   <nav class="text-center">
     <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
     <ul class="pagination">
+      <img src= <?php echo$row['image'] ?>  alt="" width="339" height="355" align="left"/>
       <li></li>
     </ul>
-    <p>some text here </p>
-    <p>dfed</p>
+    <p><?php echo$row['description'] ?>    </p>
     <p>&nbsp;</p>
+    
     <p>&nbsp;</p>
-    <p>dwf</p>
-    <p>dfe</p>
-    <p>refd</p>
-    <p>&nbsp;</p>
-    <p>re</p>
-    <p>rwef</p>
-    <p>&nbsp;</p>
+    <p>
   </nav>
-</div>
+  <p>  
+ </div>
+<?php
 
+
+}
+
+
+mysql_close();
+?>
 <?php
 include('footer.html');
 ?>

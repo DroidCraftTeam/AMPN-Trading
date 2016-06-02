@@ -1,10 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Members</title>
+<title>Members Area</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="New folder/css/bootstrap.css">
@@ -21,45 +24,31 @@
 include('header.html');
 ?>
 
-
 <hr>
-<h2 class="text-center">Members Login</h2>
+<h2 class="text-center">Members Area</h2>
 <hr>
-<?PHP
+<div class="container">
+  <div class="row text-center">
 
-session_start();
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+      <div> <a href="quote.php"><img src="quote.png" alt="Thumbnail Image 1" class="img-responsive"></a>
+        
+      </div>
+    </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+      <div> <a href="history.php"><img src="history.png" alt="Thumbnail Image 1" class="img-responsive"></a>
+        
+      </div>
+    </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+      <div> <a href="logout.php"><img src="logout.jpg" alt="Thumbnail Image 1" class="img-responsive"></a>
+       
+      </div>
+    </div>
+ </div>
 
-if ((isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-
-header ("Location: membersarea.php");
-
-}
-
-?>
-
-
-
-
-
- <div class="container">
-  <form action="login.php" method="post" name="form1"> <nav class="text-center">
-  
- 
-      <label for="email">E-Mail:</label>
-      <input type="text" name="email" id="email">
-    </p>
-    <p>
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" maxLength=10>
-    </p>
-    <p>
-      <button type="submit" name="button" id="button" value="Login"  class="btn btn-primary">Login</button>
-  </p>
-    <p><a href="registration.php">New Member? Click here to register.</a></p>
-</form>
-  </nav>
 </div>
+<br>
 
 <?php
 include('footer.html');

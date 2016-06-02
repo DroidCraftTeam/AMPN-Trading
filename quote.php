@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap eCommerce Template</title>
+<title>Request Quote</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="New folder/css/bootstrap.css">
@@ -20,6 +20,25 @@
 <?php
 include('header.html');
 ?>
+
+
+<?PHP
+
+session_start();
+
+if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+
+
+header ("Location: members.php");
+
+}
+
+?>
+
+
+
+
+
 <div class="container">
     <div class="row"></div>
 </div>
@@ -29,40 +48,73 @@ include('header.html');
 <h2 class="text-center">Request Quote</h2>
 <hr>
 <div class="container">
-  <div class="row text-center">
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6 hidden-lg hidden-md hidden-sm">
-      <div class="thumbnail"><img src="New folder/img/400X200.gif" alt="Thumbnail Image 1" class="img-responsive">
-        <div class="caption">
-          <h3>Product</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-          <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row text-center hidden-xs"></div>
+  
+  
   <nav class="text-left">
-    <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
-    <ul class="pagination">
-      <li></li>
-    </ul>
-    <form method="post" name="form" action="http://formspree.io/insideoutlivingsolutions@gmail.com">
-    Name:
-    
-      <input type="text" name="name" id="textfield">
-   <br><br>
    
- Email:
+ 
+
+<form method="post" name="form" action="http://formspree.io/droidcraftteam@gmail.com">
+    <p>Name:
+  <input type="text" name="name" id="name">
+      <br><br>
+      
+      Email:
       <input type="email" name="email" id="email">
- <br><br> Phone:
-      <input type="tel" name="tel" id="tel">
-<br> <br> Enquiry details (Qty required, when &amp; where):
+      <br><br> Phone:
+      <input type="tel" name="phone" id="phone">
+    </p>
+    <p>      <br>
+    </p>
+    <div class="form-group">
+      Select Product:
+      <select multiple class="form-control" size=10 id="products" name="products[]">
+
+    <option>Filament Tape</option>
+    <option>Masking Tape</option>
+    <option>Printed Tape - Fragile</option>
+    <option>Duct Tape</option>
+    <option>Printed Tape - Top Load Only</option>
+    
+
+
+    <option>Hand Stretch Wrap</option>
+    <option>Machine Stretch Wrap</option>
+    <option>Bundling Wrap</option>
+    
+
+
+    <option>Mini Grip Bags</option>
+
+
+    <option>Corrugated Cardboard</option>
+    <option>Angle Board</option>
+
+
+
+    <option>Polycell Bubble Wrap</option>
+    <option>Poly Foam</option>
+
+
+
+    <option>Polyester Strap</option>
+    <option>Plastic Buckles</option>
+    <option>Wire Buckles</option>
+    <option>Seals</option>
+    <option>Steel Strap</option>
+
+
+
+  </select>
+</div><br> 
+Enquiry details (Qty required, when &amp; where):
         
      
- <br><br> <textarea name="textarea" cols="80" rows="10" id="textarea"></textarea>
+ <br><br> <textarea name="enquiry" cols="80" rows="10" id="enquiry"></textarea>
  
     <p>&nbsp;</p>
-    <input name="submit" type="submit" id="submit" formaction="http://formspree.io/insideoutlivingsolutions@gmail.com" value="Get Quote">
+<button name="submit" type="submit" id="submit" value="Save"  class="btn btn-primary" formaction="savequote.php" >Save</button>
+    <button name="submit" type="submit" id="submit" value="Get Quote"  class="btn btn-primary" formaction="http://formspree.io/droidcraftteam@gmail.com" >Get Quote</button>
   </form>
     <p>&nbsp;</p>
   </nav>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Members</title>
+<title>Masking Tape</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="New folder/css/bootstrap.css">
@@ -17,50 +17,60 @@
     <![endif]-->
 </head>
 <body>
+
+
 <?php
 include('header.html');
 ?>
 
 
-<hr>
-<h2 class="text-center">Members Login</h2>
-<hr>
-<?PHP
 
-session_start();
+<?php
+$conn = mysql_connect("localhost","root","");
+mysql_select_db("website", $conn);
+$seetable = "Select product_code, name,description,image from products where product_code=2";
 
-if ((isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-
-header ("Location: membersarea.php");
-
-}
+$result1 = mysql_query($seetable, $conn);
+while ($row = mysql_fetch_assoc($result1))   {
+   
+               
 
 ?>
 
 
+<h2 class="text-center"><?php echo$row['name'] ?></h2>
+<hr>  
+
+<div class="container">
+  <div class="row text-center">
+   
+  </div>
+  <div class="row text-center hidden-xs"></div>
+  <nav class="text-center">
+    <!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
+    <ul class="pagination">
+      <img src= <?php echo$row['image'] ?>  alt="" width="339" height="355" align="left"/>
+      <li></li>
+    </ul>
+    <p><?php echo$row['description'] ?>    </p>
+    
 
 
 
- <div class="container">
-  <form action="login.php" method="post" name="form1"> <nav class="text-center">
-  
- 
-      <label for="email">E-Mail:</label>
-      <input type="text" name="email" id="email">
-    </p>
-    <p>
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" maxLength=10>
-    </p>
-    <p>
-      <button type="submit" name="button" id="button" value="Login"  class="btn btn-primary">Login</button>
-  </p>
-    <p><a href="registration.php">New Member? Click here to register.</a></p>
-</form>
+
+
+
   </nav>
-</div>
+  <p>  
+ </div>
+<?php
 
+
+}
+
+
+mysql_close();
+?>
 <?php
 include('footer.html');
 ?>
